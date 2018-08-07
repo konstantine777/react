@@ -1,0 +1,385 @@
+$blue: #133182
+$lightblue: #007bff
+$lightblue2: #2b5bda
+$lightblue3: #2ea999
+$green: #00b449
+$red: #bb3d4e
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: sans-serif
+
+.main_wrapper
+  width: 100%
+  overflow: hidden
+  height: 100vh
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+
+.navbar
+  width: 250px
+  background-color: $blue
+  display: inline-block
+  height: 100%
+  position: relative
+  z-index: 3
+  .navbar_logo
+  height: 80px
+  width: 100%
+  padding: 10px
+  text-align: center
+  img
+  height: 80%
+  .navbar_item
+  width: 100%
+  padding: 0px 30px
+  height: 60px
+  cursor: pointer
+  transition: all .3s
+  background-color: $blue
+  .navbar_item_title
+  color: #fff
+  font-size: 20px
+  position: relative
+  top: 50%
+  transform: translate(0%, -50%)
+  & .active
+	background: linear-gradient(to right, $lightblue, $blue)
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.18)
+  .navbar_item:hover
+	background-color: $lightblue2
+
+.main_content
+  display: inline-block
+  width: calc(100% - 250px)
+  background-color: #f3f3f4
+  position: relative
+  z-index: 2
+  height: 100%
+  overflow: hidden
+  .mCSB_scrollTools .mCSB_draggerContainer .mCSB_dragger .mCSB_dragger_bar
+  background-color: $lightblue
+  .mCSB_scrollTools .mCSB_draggerContainer .mCSB_draggerRail
+  background-color: gray
+  .status_page
+	height: 100vh
+	width: 100%
+	.status_page_head
+  height: 60px
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-between
+  padding: 10px 30px
+  background-color: #fff
+  box-shadow: 0px 0px 5px #000
+  align-items: center
+  position: fixed
+  z-index: 5
+  top: 0
+  left: 250
+  width: calc(100% - 250px)
+  label
+  display: -webkit-inline-flex
+  display: -moz-inline-flex
+  display: -ms-inline-flex
+  display: -o-inline-flex
+  display: inline-flex
+  justify-content: flex-end
+  align-items: center
+  vertical-align: middle
+  input
+	display: none
+  .radio_custom
+	position: relative
+	width: 20px
+	height: 20px
+	display: inline-block
+	vertical-align: middle
+	background-color: $red
+	border-radius: 50%
+  input:checked + .radio_custom::before
+	content: ""
+	display: inline-block
+	position: absolute
+	background-color: $green
+	order: 1px solid $green
+	width: 100%
+	height: 100%
+	border-radius: 50%
+  input:disabled + .radio_custom::before
+	content: ""
+	display: inline-block
+	position: absolute
+	background-color: gray
+	width: 100%
+	height: 100%
+	border-radius: 50%
+  p
+	font-size: 16px
+	margin-left: 10px
+	.head_button
+  button
+	outline: 0
+	border: 0
+	background-color: $lightblue3
+	color: #fff
+	width: 80px
+	height: 35px
+	font-size: 16px
+	border-radius: 5px
+	cursor: pointer
+	transition: all .3s
+	opacity: 1
+  button:hover
+	opacity: .8
+  .status_content
+	overflow: hidden
+	margin-top: 60px
+	height: calc(100vh - 60px)
+  .status_form_wrapper
+	margin: 20px
+	box-shadow: 0px 0px 5px #000
+	padding: 20px
+	height: 50vh
+	background-color: #fff
+  .status_form
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-around
+	align-items: flex-start
+	align-content: flex-start
+	padding-right: 20px
+	.status_item:nth-child(1)
+  border-left: 0px
+	.status_item
+  border-left: 1px solid gray
+  padding: 0px 10px
+  height: 100%
+  display: inline-block
+  vertical-align: top
+  .status_item_title
+  font-size: 18px
+  padding-left: 15px
+  margin-bottom: 20px
+  width: 100%
+	.status_item_info
+  width: 100%
+  margin-bottom: 20px
+  p
+	width: 100%
+	font-size: 16px
+	margin-bottom: 2px
+	span
+	margin-left: 10px
+	& .cores
+  display: -webkit-inline-flex
+  display: -moz-inline-flex
+  display: -ms-inline-flex
+  display: -o-inline-flex
+  display: inline-flex
+  flex-wrap: wrap
+  justify-content: center
+  .forma_group
+	width: 15%
+	margin: 10px 5%
+  & .checkbox
+	display: inline-block
+	.forma_group
+	& .checkbox
+  label
+	display: inline-block
+	vertical-align: middle
+	input
+	display: none
+	.checkbox-custom
+  position: relative
+  width: 20px
+  height: 20px
+  display: inline-block
+  vertical-align: middle
+  background-color: $red
+	input:checked + .checkbox-custom::before
+  content: ""
+  display: inline-block
+  position: absolute
+  background-color: $green
+  order: 1px solid $green
+  width: 100%
+  height: 100%
+	input:disabled + .checkbox-custom::before
+  content: ""
+  display: inline-block
+  position: absolute
+  background-color: gray
+  width: 100%
+  height: 100%
+  .status_item_settings
+  p
+	font-size: 17px
+	margin-bottom: 10px
+  .forma_group
+	width: 100%
+	margin-bottom: 10px
+	label
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: flex-start
+	width: 100%
+	span
+	width: 40px
+  input
+	border: 1px solid gray
+	border-radius: 3px
+	outline: 0
+	margin: 0px 5px
+	width: 70px
+	position: relative
+  input:focus
+	border: 1px solid $lightblue3
+	box-shadow: 0px 0px 5px 0px $lightblue3
+	& .gpu_status
+  overflow: hidden
+  height: 100%
+  .gpu_item
+  border-bottom: 1px solid gray
+  margin-top: 10px
+  margin-right: 30px
+  .forma_group
+	margin-bottom: 10px
+  .status_statistics
+	display: block
+	background-color: #fff
+	margin: 20px
+	box-shadow: 0px 0px 5px #000
+	padding: 20px
+	.status_statistics_title
+  font-size: 20px
+  margin-bottom: 10px
+	.status_statistics_info
+  margin-left: 20px
+  margin-bottom: 15px
+  p
+  span
+	margin-left: 10px
+	.status_plot
+  width: 100%
+  border: 1px solid gray
+  .status_plot_head
+  padding: 5px
+  border-bottom: 1px solid gray
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: space-around
+  align-items: center
+  button
+	border: 0
+	outline: 0
+	background-color: $lightblue3
+	width: 120px
+	color: #fff
+	font-size: 16px
+	height: 30px
+	cursor: pointer
+	border-radius: 5px
+	transition: .3s
+  button:hover
+	opacity: 0.8
+	.status_plot_content
+  width: 100%
+  .orders_page, .history_page
+	height: 100%
+	width: 100%
+	.orders_content, .history_content
+  margin: 20px
+  background-color: #fff
+  box-shadow: 0px 0px 5px #000
+  padding: 10px 20px
+  table
+  table-layout: auto
+  text-align: center
+  width: 100%
+  border-collapse: collapse
+  border: 1px solid gray
+  th
+	padding: 10px 5px
+	background-color: #f3f3f4
+  tr:nth-child(even)
+	background-color:#f3f6fa
+  td
+	border: 1px solid gray
+	padding: 10px 5px
+	.table_checkboxs
+	width: 100%
+	font-size: 0
+	.table_checkboxs_row
+	width: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	.forma_group
+	width: 50%
+	margin: 5px 0px
+	label
+  display: inline-block
+  input
+  display: none
+  .checkbox-custom
+  position: relative
+  width: 20px
+  height: 20px
+  display: inline-block
+  vertical-align: middle
+  background-color: $red
+	input:checked + .checkbox-custom::before
+  content: ""
+  display: inline-block
+  position: absolute
+  background-color: $green
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+	input:disabled + .checkbox-custom::before
+  content: ""
+  display: inline-block
+  position: absolute
+  background-color: gray
+  width: 100%
+  height: 100%
+	.table_status
+  position: relative
+  text-align: left
+  margin-left: 10px
+  p
+	margin-bottom: 5px
+	button
+  font-size: 18px
+  border: 0
+  outline: 0
+  background-color: $lightblue3
+  padding: 5px
+  position: relative
+  left: 50%
+  transform: translate(-100%, 0%)
+  cursor: pointer
+  color: #fff
+  border-radius: 5px
+  width: 80px

@@ -1,0 +1,6 @@
+/node_modules/
+/.idea/
+/index.php
+/render.php
+/.htaccess
+/package-lock.json

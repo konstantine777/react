@@ -1,0 +1,586 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.navbar > a {
+	text-decoration: none;
+}
+
+.main_wrapper {
+	width: 100%;
+	overflow: hidden;
+	height: 100vh;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.navbar {
+	width: 250px;
+	background-color: #133182;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+	z-index: 3;
+}
+
+.navbar .navbar_logo {
+	height: 80px;
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+}
+
+.navbar .navbar_logo img {
+	height: 80%;
+}
+
+.navbar .navbar_item {
+	width: 100%;
+	padding: 0px 30px;
+	height: 60px;
+	cursor: pointer;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+	background-color: #133182;
+}
+
+.navbar .navbar_item .navbar_item_title {
+	color: #fff;
+	font-size: 20px;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translate(0%, -50%);
+	-ms-transform: translate(0%, -50%);
+	transform: translate(0%, -50%);
+}
+
+.navbar .active {
+	background: -webkit-gradient(linear, left top, right top, from(#007bff), to(#133182));
+	background: -webkit-linear-gradient(left, #007bff, #133182);
+	background: -o-linear-gradient(left, #007bff, #133182);
+	background: linear-gradient(to right, #007bff, #133182);
+	-webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.18);
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.18);
+}
+
+.navbar .navbar_item:hover {
+	background-color: #2b5bda;
+}
+
+.main_content {
+	display: inline-block;
+	width: calc(100% - 250px);
+	background-color: #f3f3f4;
+	position: relative;
+	z-index: 2;
+	height: 100%;
+	overflow: hidden;
+}
+
+.main_content .mCSB_scrollTools .mCSB_draggerContainer .mCSB_dragger .mCSB_dragger_bar {
+	background-color: #007bff;
+}
+
+.main_content .mCSB_scrollTools .mCSB_draggerContainer .mCSB_draggerRail {
+	background-color: gray;
+}
+
+.main_content .status_page {
+	height: 100vh;
+	width: 100%;
+}
+
+.main_content .status_page .status_page_head {
+	height: 60px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: 10px 30px;
+	background-color: #fff;
+	-webkit-box-shadow: 0px 0px 5px #000;
+	box-shadow: 0px 0px 5px #000;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	left: 250;
+	width: calc(100% - 250px);
+}
+
+.main_content .status_page .status_page_head label {
+	display: -webkit-inline-flex;
+	display: -moz-inline-flex;
+	display: -ms-inline-flex;
+	display: -o-inline-flex;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	vertical-align: middle;
+}
+
+.main_content .status_page .status_page_head label input {
+	display: none;
+}
+
+.main_content .status_page .status_page_head label .radio_custom {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	vertical-align: middle;
+	background-color: #bb3d4e;
+	border-radius: 50%;
+}
+
+.main_content .status_page .status_page_head label input:checked + .radio_custom::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	background-color: #00b449;
+	-webkit-box-ordinal-group: 2;
+	-ms-flex-order: 1px solid #00b449;
+	order: 1px solid #00b449;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.main_content .status_page .status_page_head label input:disabled + .radio_custom::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	background-color: gray;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.main_content .status_page .status_page_head label p {
+	font-size: 16px;
+	margin-left: 10px;
+}
+
+.main_content .status_page .status_page_head .head_button button {
+	outline: 0;
+	border: 0;
+	background-color: #2ea999;
+	color: #fff;
+	width: 80px;
+	height: 35px;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+	opacity: 1;
+}
+
+.main_content .status_page .status_page_head .head_button button:hover {
+	opacity: .8;
+}
+
+.main_content .status_content {
+	overflow: hidden;
+	margin-top: 60px;
+	height: calc(100vh - 60px);
+}
+
+.main_content .status_form_wrapper {
+	margin: 20px;
+	-webkit-box-shadow: 0px 0px 5px #000;
+	box-shadow: 0px 0px 5px #000;
+	padding: 20px;
+	height: 50vh;
+	background-color: #fff;
+}
+
+.main_content .status_form {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	-ms-flex-line-pack: start;
+	align-content: flex-start;
+	padding-right: 20px;
+}
+
+.main_content .status_form .status_item:nth-child(1) {
+	border-left: 0px;
+}
+
+.main_content .status_form .status_item {
+	border-left: 1px solid gray;
+	padding: 0px 10px;
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.main_content .status_form .status_item .status_item_title {
+	font-size: 18px;
+	padding-left: 15px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.main_content .status_form .status_item .status_item_info {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.main_content .status_form .status_item .status_item_info p {
+	width: 100%;
+	font-size: 16px;
+	margin-bottom: 2px;
+}
+
+.main_content .status_form .status_item .status_item_info p span {
+	margin-left: 10px;
+}
+
+.main_content .status_form .status_item .cores {
+	display: -webkit-inline-flex;
+	display: -moz-inline-flex;
+	display: -ms-inline-flex;
+	display: -o-inline-flex;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.main_content .status_form .status_item .cores .forma_group {
+	width: 15%;
+	margin: 10px 5%;
+}
+
+.main_content .status_form .status_item .cores .checkbox {
+	display: inline-block;
+}
+
+.main_content .status_form .status_item .checkbox label {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.main_content .status_form .status_item .checkbox label input {
+	display: none;
+}
+
+.main_content .status_form .status_item .checkbox label .checkbox-custom {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	vertical-align: middle;
+	background-color: #bb3d4e;
+}
+
+.main_content .status_form .status_item .checkbox label input:checked + .checkbox-custom::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	background-color: #00b449;
+	-webkit-box-ordinal-group: 2;
+	-ms-flex-order: 1px solid #00b449;
+	order: 1px solid #00b449;
+	width: 100%;
+	height: 100%;
+}
+
+.main_content .status_form .status_item .checkbox label input:disabled + .checkbox-custom::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	background-color: gray;
+	width: 100%;
+	height: 100%;
+}
+
+.main_content .status_form .status_item .status_item_settings p {
+	font-size: 17px;
+	margin-bottom: 10px;
+}
+
+.main_content .status_form .status_item .status_item_settings .forma_group {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.main_content .status_form .status_item .status_item_settings .forma_group label {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+.main_content .status_form .status_item .status_item_settings .forma_group label span {
+	width: 40px;
+}
+
+.main_content .status_form .status_item .status_item_settings .forma_group label input {
+	border: 1px solid gray;
+	border-radius: 3px;
+	outline: 0;
+	margin: 0px 5px;
+	width: 70px;
+	position: relative;
+}
+
+.main_content .status_form .status_item .status_item_settings .forma_group label input:focus {
+	border: 1px solid #2ea999;
+	-webkit-box-shadow: 0px 0px 5px 0px #2ea999;
+	box-shadow: 0px 0px 5px 0px #2ea999;
+}
+
+.main_content .status_form .gpu_status {
+	overflow: hidden;
+	height: 100%;
+}
+
+.main_content .status_form .gpu_status .gpu_item {
+	border-bottom: 1px solid gray;
+	margin-top: 10px;
+	margin-right: 30px;
+}
+
+.main_content .status_form .gpu_status .gpu_item .forma_group {
+	margin-bottom: 10px;
+}
+
+.main_content .status_statistics {
+	display: block;
+	background-color: #fff;
+	margin: 20px;
+	-webkit-box-shadow: 0px 0px 5px #000;
+	box-shadow: 0px 0px 5px #000;
+	padding: 20px;
+}
+
+.main_content .status_statistics .status_statistics_title {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.main_content .status_statistics .status_statistics_info {
+	margin-left: 20px;
+	margin-bottom: 15px;
+}
+
+.main_content .status_statistics .status_statistics_info p span {
+	margin-left: 10px;
+}
+
+.main_content .status_statistics .status_plot {
+	width: 100%;
+	border: 1px solid gray;
+}
+
+.main_content .status_statistics .status_plot .status_plot_head {
+	padding: 5px;
+	border-bottom: 1px solid gray;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.main_content .status_statistics .status_plot .status_plot_head button {
+	border: 0;
+	outline: 0;
+	background-color: #2ea999;
+	width: 120px;
+	color: #fff;
+	font-size: 16px;
+	height: 30px;
+	cursor: pointer;
+	border-radius: 5px;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+}
+
+.main_content .status_statistics .status_plot .status_plot_head button:hover {
+	opacity: 0.8;
+}
+
+.main_content .status_statistics .status_plot .status_plot_content {
+	width: 100%;
+}
+
+.main_content .orders_page, .main_content .history_page {
+	height: 100%;
+	width: 100%;
+}
+
+.main_content .orders_page .orders_content, .main_content .orders_page .history_content, .main_content .history_page .orders_content, .main_content .history_page .history_content {
+	margin: 20px;
+	background-color: #fff;
+	-webkit-box-shadow: 0px 0px 5px #000;
+	box-shadow: 0px 0px 5px #000;
+	padding: 10px 20px;
+}
+
+.main_content .orders_page .orders_content table, .main_content .orders_page .history_content table, .main_content .history_page .orders_content table, .main_content .history_page .history_content table {
+	table-layout: auto;
+	text-align: center;
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid gray;
+}
+
+.main_content .orders_page .orders_content table th, .main_content .orders_page .history_content table th, .main_content .history_page .orders_content table th, .main_content .history_page .history_content table th {
+	padding: 10px 5px;
+	background-color: #f3f3f4;
+}
+
+.main_content .orders_page .orders_content table tr:nth-child(even), .main_content .orders_page .history_content table tr:nth-child(even), .main_content .history_page .orders_content table tr:nth-child(even), .main_content .history_page .history_content table tr:nth-child(even) {
+	background-color: #f3f6fa;
+}
+
+.main_content .orders_page .orders_content table td, .main_content .orders_page .history_content table td, .main_content .history_page .orders_content table td, .main_content .history_page .history_content table td {
+	border: 1px solid gray;
+	padding: 10px 5px;
+}
+
+.main_content .orders_page .orders_content table td .table_checkboxs, .main_content .orders_page .history_content table td .table_checkboxs, .main_content .history_page .orders_content table td .table_checkboxs, .main_content .history_page .history_content table td .table_checkboxs {
+	width: 100%;
+	font-size: 0;
+}
+
+.main_content .orders_page .orders_content table td .table_checkboxs .table_checkboxs_row, .main_content .orders_page .history_content table td .table_checkboxs .table_checkboxs_row, .main_content .history_page .orders_content table td .table_checkboxs .table_checkboxs_row, .main_content .history_page .history_content table td .table_checkboxs .table_checkboxs_row {
+	width: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.main_content .orders_page .orders_content table td .table_checkboxs .table_checkboxs_row .forma_group, .main_content .orders_page .history_content table td .table_checkboxs .table_checkboxs_row .forma_group, .main_content .history_page .orders_content table td .table_checkboxs .table_checkboxs_row .forma_group, .main_content .history_page .history_content table td .table_checkboxs .table_checkboxs_row .forma_group {
+	width: 50%;
+	margin: 5px 0px;
+}
+
+.main_content .orders_page .orders_content table td .table_checkboxs .table_checkboxs_row .forma_group label, .main_content .orders_page .history_content table td .table_checkboxs .table_checkboxs_row .forma_group label, .main_content .history_page .orders_content table td .table_checkboxs .table_checkboxs_row .forma_group label, .main_content .history_page .history_content table td .table_checkboxs .table_checkboxs_row .forma_group label {
+	display: inline-block;
+}
+
+.main_content .orders_page .orders_content table td .table_checkboxs .table_checkboxs_row .forma_group label input, .main_content .orders_page .history_content table td .table_checkboxs .table_checkboxs_row .forma_group label input, .main_content .history_page .orders_content table td .table_checkboxs .table_checkboxs_row .forma_group label input, .main_content .history_page .history_content table td .table_checkboxs .table_checkboxs_row .forma_group label input {
+	display: none;
+}
+
+.main_content .orders_page .orders_content table td .table_checkboxs .table_checkboxs_row .forma_group label .checkbox-custom, .main_content .orders_page .history_content table td .table_checkboxs .table_checkboxs_row .forma_group label .checkbox-custom, .main_content .history_page .orders_content table td .table_checkboxs .table_checkboxs_row .forma_group label .checkbox-custom, .main_content .history_page .history_content table td .table_checkboxs .table_checkboxs_row .forma_group label .checkbox-custom {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	vertical-align: middle;
+	background-color: #bb3d4e;
+}
+
+.main_content .orders_page .orders_content table td .table_checkboxs .table_checkboxs_row .forma_group label input:checked + .checkbox-custom::before, .main_content .orders_page .history_content table td .table_checkboxs .table_checkboxs_row .forma_group label input:checked + .checkbox-custom::before, .main_content .history_page .orders_content table td .table_checkboxs .table_checkboxs_row .forma_group label input:checked + .checkbox-custom::before, .main_content .history_page .history_content table td .table_checkboxs .table_checkboxs_row .forma_group label input:checked + .checkbox-custom::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	background-color: #00b449;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.main_content .orders_page .orders_content table td .table_checkboxs .table_checkboxs_row .forma_group label input:disabled + .checkbox-custom::before, .main_content .orders_page .history_content table td .table_checkboxs .table_checkboxs_row .forma_group label input:disabled + .checkbox-custom::before, .main_content .history_page .orders_content table td .table_checkboxs .table_checkboxs_row .forma_group label input:disabled + .checkbox-custom::before, .main_content .history_page .history_content table td .table_checkboxs .table_checkboxs_row .forma_group label input:disabled + .checkbox-custom::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	background-color: gray;
+	width: 100%;
+	height: 100%;
+}
+
+.main_content .orders_page .orders_content table td .table_status, .main_content .orders_page .history_content table td .table_status, .main_content .history_page .orders_content table td .table_status, .main_content .history_page .history_content table td .table_status {
+	position: relative;
+	text-align: left;
+	margin-left: 10px;
+}
+
+.main_content .orders_page .orders_content table td .table_status p, .main_content .orders_page .history_content table td .table_status p, .main_content .history_page .orders_content table td .table_status p, .main_content .history_page .history_content table td .table_status p {
+	margin-bottom: 5px;
+}
+
+.main_content .orders_page .orders_content table td button, .main_content .orders_page .history_content table td button, .main_content .history_page .orders_content table td button, .main_content .history_page .history_content table td button {
+	font-size: 18px;
+	border: 0;
+	outline: 0;
+	background-color: #2ea999;
+	padding: 5px;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translate(-100%, 0%);
+	-ms-transform: translate(-100%, 0%);
+	transform: translate(-100%, 0%);
+	cursor: pointer;
+	color: #fff;
+	border-radius: 5px;
+	width: 80px;
+}
+
+/*.checkbox-custom {*/
+/*margin-right: 4px;*/
+/*}*/
